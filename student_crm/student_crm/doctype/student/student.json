@@ -11,7 +11,12 @@
   "major",
   "email",
   "phone",
-  "location"
+  "location",
+  "date_of_birth",
+  "status",
+  "passed_credits",
+  "registered_credits",
+  "total_credits"
  ],
  "fields": [
   {
@@ -46,12 +51,38 @@
    "fieldname": "location",
    "fieldtype": "Data",
    "label": "Location"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Int",
+   "label": "Date of birth"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nAbort"
+  },
+  {
+   "fieldname": "passed_credits",
+   "fieldtype": "Int",
+   "label": "Passed credits"
+  },
+  {
+   "fieldname": "registered_credits",
+   "fieldtype": "Int",
+   "label": "Registers credits"
+  },
+  {
+   "fieldname": "total_credits",
+   "fieldtype": "Int",
+   "label": "Total credits"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-10 09:30:47.035377",
+ "modified": "2026-09-10 10:30:56.716227",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Student",
