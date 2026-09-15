@@ -3,6 +3,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "field:id_student",
  "creation": "2026-09-09 12:13:52.241297",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -63,7 +64,7 @@
    "fieldname": "student_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Name",
+   "label": "Student Name",
    "reqd": 1
   },
   {
@@ -160,10 +161,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-15 12:45:58.016064",
+ "modified": "2026-09-15 15:30:59.120932",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Student",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

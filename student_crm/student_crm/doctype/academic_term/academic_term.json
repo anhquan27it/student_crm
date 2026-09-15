@@ -1,6 +1,9 @@
 {
+ "_liked_by": "[\"Administrator\"]",
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "field:term_code",
  "creation": "2026-09-15 10:39:12.455055",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -63,7 +66,7 @@
    "default": "0",
    "fieldname": "is_current",
    "fieldtype": "Check",
-   "label": "Current Term"
+   "label": "Is Current"
   },
   {
    "fieldname": "description",
@@ -74,10 +77,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-15 10:44:13.347966",
+ "modified": "2026-09-15 15:27:27.132360",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Academic Term",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

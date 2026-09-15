@@ -1,6 +1,9 @@
 {
+ "_liked_by": "[\"Administrator\"]",
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "field:program_name",
  "creation": "2026-09-15 10:26:06.636225",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -34,7 +37,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Program Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "department",
@@ -73,10 +77,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-15 10:32:13.489293",
+ "modified": "2026-09-15 14:50:47.084498",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Program",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

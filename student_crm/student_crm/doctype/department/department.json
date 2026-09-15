@@ -1,6 +1,9 @@
 {
+ "_liked_by": "[\"Administrator\"]",
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "field:department_name",
  "creation": "2026-09-15 10:18:56.194536",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -33,7 +36,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Department Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "head_of_department",
@@ -66,10 +70,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-15 10:25:20.930597",
+ "modified": "2026-09-15 13:41:33.104059",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Department",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

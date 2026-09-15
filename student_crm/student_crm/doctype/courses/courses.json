@@ -51,7 +51,7 @@
   {
    "fieldname": "department",
    "fieldtype": "Link",
-   "label": "Demartment",
+   "label": "Department",
    "options": "Department",
    "reqd": 1
   },
@@ -78,7 +78,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-15 10:58:02.546790",
+ "modified": "2026-09-15 14:42:10.073130",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Courses",
