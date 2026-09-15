@@ -1,87 +1,82 @@
 {
- "_liked_by": "[\"Administrator\"]",
  "actions": [],
- "allow_import": 1,
  "allow_rename": 1,
- "creation": "2026-09-10 13:47:31.364417",
+ "creation": "2026-09-15 10:26:06.636225",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "courses_detail_section",
-  "course_code",
-  "course_name",
+  "program_detail_section",
+  "program_code",
+  "program_name",
   "department",
-  "credits",
-  "course_type",
-  "prerequisite",
+  "degree_level",
+  "duration_years",
+  "total_required_credits",
   "status",
   "description"
  ],
  "fields": [
   {
-   "fieldname": "courses_detail_section",
+   "fieldname": "program_detail_section",
    "fieldtype": "Section Break",
-   "label": "Courses Detail"
+   "label": "Program Detail"
   },
   {
-   "fieldname": "credits",
-   "fieldtype": "Int",
-   "label": "Credits",
-   "reqd": 1
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Small Text",
-   "label": "Description"
-  },
-  {
-   "fieldname": "course_code",
+   "fieldname": "program_code",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Course Code",
+   "label": "Program Code",
    "reqd": 1,
    "unique": 1
   },
   {
-   "fieldname": "course_name",
+   "fieldname": "program_name",
    "fieldtype": "Data",
-   "label": "Course Name",
+   "in_list_view": 1,
+   "label": "Program Name",
    "reqd": 1
   },
   {
    "fieldname": "department",
    "fieldtype": "Link",
-   "label": "Demartment",
-   "options": "Department",
-   "reqd": 1
+   "label": "Department",
+   "options": "Department"
   },
   {
-   "fieldname": "course_type",
+   "fieldname": "degree_level",
    "fieldtype": "Select",
-   "label": "Course Type",
-   "reqd": 1
+   "label": "Degree Level",
+   "options": "Associate\nBachelor\nMaster\nDoctorate"
   },
   {
-   "fieldname": "prerequisite",
-   "fieldtype": "Link",
-   "label": "Prerequisite",
-   "options": "Courses"
+   "fieldname": "duration_years",
+   "fieldtype": "Float",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "total_required_credits",
+   "fieldtype": "Int",
+   "label": "Required Credits"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Active\nInactive",
-   "reqd": 1
+   "options": "Active\nInactive"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-15 10:58:02.546790",
+ "modified": "2026-09-15 10:32:13.489293",
  "modified_by": "Administrator",
  "module": "Student Crm",
- "name": "Courses",
+ "name": "Program",
  "owner": "Administrator",
  "permissions": [
   {

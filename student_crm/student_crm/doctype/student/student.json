@@ -1,4 +1,5 @@
 {
+ "_liked_by": "[\"Administrator\"]",
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
@@ -7,16 +8,26 @@
  "engine": "InnoDB",
  "field_order": [
   "student_details_section",
-  "full_name",
-  "major",
+  "id_student",
+  "student_name",
+  "date_of_birth",
+  "gender",
   "email",
   "phone",
-  "location",
-  "date_of_birth",
-  "status",
-  "passed_credits",
-  "registered_credits",
-  "total_credits"
+  "adresss",
+  "department",
+  "program",
+  "admission_term",
+  "enrollment_date",
+  "expected_graduation_date",
+  "advisor",
+  "student_status",
+  "notes",
+  "registerd_credits",
+  "completed_credits",
+  "gpa",
+  "attendance_rate",
+  "total_absent"
  ],
  "fields": [
   {
@@ -25,32 +36,16 @@
    "label": "Student Details"
   },
   {
-   "fieldname": "full_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "major",
-   "fieldtype": "Select",
-   "label": "Major",
-   "options": "IS\nAI\nIA\nSE\nGD"
-  },
-  {
    "fieldname": "email",
    "fieldtype": "Data",
-   "label": "Email"
+   "label": "Email",
+   "reqd": 1
   },
   {
    "fieldname": "phone",
    "fieldtype": "Data",
-   "label": "Phone"
-  },
-  {
-   "fieldname": "location",
-   "fieldtype": "Data",
-   "label": "Location"
+   "label": "Phone",
+   "reqd": 1
   },
   {
    "fieldname": "date_of_birth",
@@ -58,31 +53,114 @@
    "label": "Date of birth"
   },
   {
-   "fieldname": "status",
+   "fieldname": "id_student",
+   "fieldtype": "Data",
+   "label": "ID Student",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
    "fieldtype": "Select",
-   "label": "Status",
-   "options": "Active\nAbort"
+   "label": "Gender",
+   "options": "Male\nFemale\nOther"
   },
   {
-   "fieldname": "passed_credits",
-   "fieldtype": "Int",
-   "label": "Passed credits"
+   "fieldname": "adresss",
+   "fieldtype": "Small Text",
+   "label": "Address"
   },
   {
-   "fieldname": "registered_credits",
-   "fieldtype": "Int",
-   "label": "Registers credits"
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "reqd": 1
   },
   {
-   "fieldname": "total_credits",
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "Program",
+   "reqd": 1
+  },
+  {
+   "fieldname": "admission_term",
+   "fieldtype": "Link",
+   "label": "Admission Term",
+   "options": "Academic Term",
+   "reqd": 1
+  },
+  {
+   "fieldname": "enrollment_date",
+   "fieldtype": "Date",
+   "label": "Enrollment Date"
+  },
+  {
+   "fieldname": "expected_graduation_date",
+   "fieldtype": "Date",
+   "label": "Expected Graduation Date"
+  },
+  {
+   "fieldname": "advisor",
+   "fieldtype": "Link",
+   "label": "Advisor",
+   "options": "User"
+  },
+  {
+   "fieldname": "student_status",
+   "fieldtype": "Select",
+   "label": "Student Status",
+   "options": "Active\nInactive\nSuspended\nGraduated\nWithdrawn\nOn Leave",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "registerd_credits",
+   "fieldtype": "Float",
+   "label": "Registered Credits",
+   "read_only": 1
+  },
+  {
+   "fieldname": "completed_credits",
+   "fieldtype": "Float",
+   "label": "Completed Credits",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gpa",
+   "fieldtype": "Float",
+   "label": "GPA",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_rate",
+   "fieldtype": "Percent",
+   "label": "Attendance Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_absent",
    "fieldtype": "Int",
-   "label": "Total credits"
+   "label": "Total Absent",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-10 10:30:56.716227",
+ "modified": "2026-09-15 12:45:58.016064",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Student",

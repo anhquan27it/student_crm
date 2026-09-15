@@ -1,0 +1,154 @@
+{
+ "_liked_by": "[\"Administrator\"]",
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-15 10:59:21.785017",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "course_offering_detail_section",
+  "offering_code",
+  "course",
+  "academic_term",
+  "program",
+  "section",
+  "class_name",
+  "instructor",
+  "room",
+  "capacity",
+  "total_slots",
+  "hours_per_slot",
+  "planned_hours",
+  "start_date",
+  "end_date",
+  "status",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "course_offering_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Course Offering Detail"
+  },
+  {
+   "fieldname": "offering_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Offering Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "course",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Course",
+   "options": "Courses",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "label": "Academic Term",
+   "options": "Academic Term",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "Program"
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Data",
+   "label": "Section"
+  },
+  {
+   "fieldname": "class_name",
+   "fieldtype": "Data",
+   "label": "Class Name"
+  },
+  {
+   "fieldname": "instructor",
+   "fieldtype": "Link",
+   "label": "Instructor",
+   "options": "User"
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Data",
+   "label": "Room"
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "label": "Capacity"
+  },
+  {
+   "fieldname": "total_slots",
+   "fieldtype": "Int",
+   "label": "Total Slots",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hours_per_slot",
+   "fieldtype": "Float",
+   "label": "Hours Per Slot"
+  },
+  {
+   "fieldname": "planned_hours",
+   "fieldtype": "Float",
+   "label": "Planned Hours"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Planned\nOpen\nIn Progress\nCompleted\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-15 12:53:57.806772",
+ "modified_by": "Administrator",
+ "module": "Student Crm",
+ "name": "Course Offering",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

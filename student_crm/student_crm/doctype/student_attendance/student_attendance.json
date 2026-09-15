@@ -1,0 +1,178 @@
+{
+ "_liked_by": "[\"Administrator\"]",
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2026-09-11 10:30:25.592110",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "identification",
+  "attendance_id",
+  "student",
+  "student_name",
+  "class_section",
+  "attendance_session",
+  "course_offering",
+  "course",
+  "academic_term",
+  "attendance_section",
+  "session_date",
+  "session_no",
+  "slot",
+  "status",
+  "attendance_type",
+  "remarks",
+  "audit_section",
+  "recorded_by",
+  "recorded_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "course",
+   "fieldtype": "Link",
+   "label": "Course",
+   "options": "Courses"
+  },
+  {
+   "fieldname": "slot",
+   "fieldtype": "Select",
+   "label": "Slot",
+   "options": "Slot 0\nSlot 1\nSlot 2\nSlot 3\nSlot 4\nSlot 5\nSlot 6\nSlot 7\nSlot 8\nSlot 9"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Present\nAbsent\nLate\nExcused",
+   "reqd": 1
+  },
+  {
+   "fieldname": "session_no",
+   "fieldtype": "Int",
+   "label": "Session No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "label": "Academic Term",
+   "options": "Academic Term",
+   "read_only": 1
+  },
+  {
+   "fieldname": "identification",
+   "fieldtype": "Section Break",
+   "label": "Identification"
+  },
+  {
+   "fieldname": "attendance_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Attendance ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_section",
+   "fieldtype": "Section Break",
+   "label": "Class"
+  },
+  {
+   "fieldname": "attendance_session",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Attendance Session",
+   "options": "Class Sesion",
+   "reqd": 1
+  },
+  {
+   "fieldname": "course_offering",
+   "fieldtype": "Link",
+   "label": "Course Offering",
+   "options": "Course Offering",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Attendance"
+  },
+  {
+   "fieldname": "session_date",
+   "fieldtype": "Date",
+   "label": "Session Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_type",
+   "fieldtype": "Select",
+   "label": "Attendance Type",
+   "options": "Regular\nMake-up\nOnline"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "audit_section",
+   "fieldtype": "Section Break",
+   "label": "Audit"
+  },
+  {
+   "fieldname": "recorded_by",
+   "fieldtype": "Link",
+   "label": "Recorded By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recorded_at",
+   "fieldtype": "Datetime",
+   "label": "Recorded At",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-15 12:39:28.679362",
+ "modified_by": "Administrator",
+ "module": "Student Crm",
+ "name": "Student Attendance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

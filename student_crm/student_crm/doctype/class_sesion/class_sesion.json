@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-15 12:19:49.953360",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "class_session_detail_section",
+  "session_id",
+  "course_offering",
+  "sesion_no",
+  "session_date",
+  "start_time",
+  "end_time",
+  "slot",
+  "room",
+  "instuctor",
+  "status",
+  "topic",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "class_session_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Class Session Detail"
+  },
+  {
+   "fieldname": "session_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Session ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "course_offering",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Course Offering",
+   "options": "Course Offering",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sesion_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Sesion No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "session_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Session Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time"
+  },
+  {
+   "fieldname": "slot",
+   "fieldtype": "Select",
+   "label": "Slot",
+   "options": "Slot 0\nSlot 1\nSlot 2\nSlot 3\nSlot 4\nSlot 5\nSlot 6\nSlot 7\nSlot 8\nSlot 9"
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Data",
+   "label": "Room"
+  },
+  {
+   "fieldname": "instuctor",
+   "fieldtype": "Link",
+   "label": "Instructor",
+   "options": "User"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nCompleted\nCancelled\nPostponed\nMake-up",
+   "reqd": 1
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Small Text",
+   "label": "Topic"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-15 12:28:12.075219",
+ "modified_by": "Administrator",
+ "module": "Student Crm",
+ "name": "Class Sesion",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

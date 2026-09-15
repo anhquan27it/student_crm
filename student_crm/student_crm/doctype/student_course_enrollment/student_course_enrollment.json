@@ -1,0 +1,164 @@
+{
+ "_liked_by": "[\"Administrator\"]",
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2026-09-14 14:13:35.196972",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "student_course_enrollment_detail_section",
+  "enrollment_id",
+  "student",
+  "student_name",
+  "course_offering",
+  "course",
+  "academic_term",
+  "enrollment_date",
+  "status",
+  "credit",
+  "final_grade",
+  "grade_point",
+  "total_scheduled_sessions",
+  "total_present",
+  "total_absent",
+  "attendance_rate",
+  "absent_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "student_course_enrollment_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Student Course Enrollment Detail"
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "enrollment_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Enrollment ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "course_offering",
+   "fieldtype": "Link",
+   "label": "Course Offering",
+   "options": "Course Offering",
+   "reqd": 1
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "course",
+   "fieldtype": "Link",
+   "label": "Course",
+   "options": "Academic Term",
+   "read_only": 1
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "label": "Academic Term",
+   "options": "Academic Term",
+   "read_only": 1
+  },
+  {
+   "fieldname": "enrollment_date",
+   "fieldtype": "Date",
+   "label": "Enrollment Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Enrolled\nCompleted\nDropped\nWithdrawn\nFailed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "credit",
+   "fieldtype": "Float",
+   "label": "Credits"
+  },
+  {
+   "fieldname": "final_grade",
+   "fieldtype": "Data",
+   "label": "Final Grade"
+  },
+  {
+   "fieldname": "grade_point",
+   "fieldtype": "Float",
+   "label": "Grade Point"
+  },
+  {
+   "fieldname": "total_scheduled_sessions",
+   "fieldtype": "Int",
+   "label": "Total Scheduled Sessions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_present",
+   "fieldtype": "Int",
+   "label": "Total Present",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_absent",
+   "fieldtype": "Int",
+   "label": "Total Absent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_rate",
+   "fieldtype": "Percent",
+   "label": "Attendance Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "absent_rate",
+   "fieldtype": "Percent",
+   "label": "Absent Rate",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-15 11:32:23.907867",
+ "modified_by": "Administrator",
+ "module": "Student Crm",
+ "name": "Student Course Enrollment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
