@@ -1,6 +1,6 @@
 {
- "_liked_by": "[\"Administrator\"]",
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "creation": "2026-09-15 10:59:21.785017",
  "doctype": "DocType",
@@ -127,7 +127,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-15 12:53:57.806772",
+ "modified": "2026-09-16 09:27:17.713104",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Course Offering",

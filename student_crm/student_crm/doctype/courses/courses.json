@@ -1,8 +1,8 @@
 {
- "_liked_by": "[\"Administrator\"]",
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "field:course_code",
  "creation": "2026-09-10 13:47:31.364417",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -78,10 +78,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-15 14:42:10.073130",
+ "modified": "2026-09-16 10:39:46.499661",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Courses",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

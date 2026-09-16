@@ -1,5 +1,4 @@
 {
- "_liked_by": "[\"Administrator\"]",
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
@@ -70,7 +69,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-15 13:41:33.104059",
+ "modified": "2026-09-15 13:43:56.231951",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Department",
