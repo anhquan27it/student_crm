@@ -81,7 +81,7 @@
  "modified": "2026-09-16 10:39:46.499661",
  "modified_by": "Administrator",
  "module": "Student Crm",
- "name": "Courses",
+ "name": "Course",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [

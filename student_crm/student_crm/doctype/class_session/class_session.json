@@ -1,6 +1,8 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "field:session_id",
  "creation": "2026-09-15 12:19:49.953360",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -30,7 +32,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Session ID",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "course_offering",
@@ -44,7 +47,7 @@
    "fieldname": "sesion_no",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Sesion No",
+   "label": "Session No",
    "reqd": 1
   },
   {
@@ -102,10 +105,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-15 12:28:12.075219",
+ "modified": "2026-09-16 14:16:45.366029",
  "modified_by": "Administrator",
  "module": "Student Crm",
- "name": "Class Sesion",
+ "name": "Class Session",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

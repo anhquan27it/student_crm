@@ -1,8 +1,8 @@
 {
- "_liked_by": "[\"Administrator\"]",
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "field:enrollment_id",
  "creation": "2026-09-14 14:13:35.196972",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -65,7 +65,7 @@
    "fieldname": "course",
    "fieldtype": "Link",
    "label": "Course",
-   "options": "Academic Term",
+   "options": "Course",
    "read_only": 1
   },
   {
@@ -106,7 +106,7 @@
   {
    "fieldname": "total_scheduled_sessions",
    "fieldtype": "Int",
-   "label": "Total Scheduled Sessions",
+   "label": "Total Sessions",
    "read_only": 1
   },
   {
@@ -137,10 +137,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-15 11:32:23.907867",
+ "modified": "2026-09-17 12:06:55.777404",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Student Course Enrollment",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

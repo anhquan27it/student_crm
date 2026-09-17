@@ -2,6 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "field:offering_code",
  "creation": "2026-09-15 10:59:21.785017",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -43,7 +44,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Course",
-   "options": "Courses",
+   "options": "Course",
    "reqd": 1
   },
   {
@@ -127,10 +128,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-16 09:27:17.713104",
+ "modified": "2026-09-17 12:06:55.615327",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Course Offering",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

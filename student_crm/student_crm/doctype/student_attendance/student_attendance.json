@@ -1,8 +1,8 @@
 {
- "_liked_by": "[\"Administrator\"]",
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "field:attendance_id",
  "creation": "2026-09-11 10:30:25.592110",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -46,7 +46,7 @@
    "fieldname": "course",
    "fieldtype": "Link",
    "label": "Course",
-   "options": "Courses"
+   "options": "Course"
   },
   {
    "fieldname": "slot",
@@ -85,7 +85,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Attendance ID",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "class_section",
@@ -97,7 +98,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Attendance Session",
-   "options": "Class Sesion",
+   "options": "Class Session",
    "reqd": 1
   },
   {
@@ -151,10 +152,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-15 12:39:28.679362",
+ "modified": "2026-09-17 12:06:55.884749",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Student Attendance",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
