@@ -4,6 +4,8 @@ Backend **Frappe v16** và Website tiếng Việt cho quản lý chuyên cần s
 
 **Hướng dẫn đầy đủ:** [Cài đặt Ubuntu / WSL](docs/INSTALL_UBUNTU.md) · [Dữ liệu và tài khoản mẫu](docs/DEMO_DATA.md) · [Kiến trúc và API](docs/DEVELOPMENT.md).
 
+**Dành cho bạn bè/thành viên mới:** đọc [NOTE_HUONG_DAN.md](NOTE_HUONG_DAN.md) để làm từng bước từ tải app, tạo site, nạp dữ liệu mẫu đến thử các luồng theo vai trò.
+
 ## Cài nhanh khi đã có Frappe v16
 
 Trong terminal Ubuntu, thay `~/frappe-bench` bằng đường dẫn bench của bạn. Dùng site mới để thử nghiệm:
