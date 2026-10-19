@@ -1,0 +1,8 @@
+{
+  "name": "student-crm-portal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"start": "node --env-file-if-exists=.env server.mjs", "dev": "node --watch --env-file-if-exists=.env server.mjs", "check": "node --check server.mjs && node --check public/app.js && node --check public/support-ui.js && node --check public/role-ui.js", "test": "node --test tests/*.test.mjs"},
+  "engines": {"node": ">=22"}
+}

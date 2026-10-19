@@ -23,7 +23,8 @@
   "start_date",
   "end_date",
   "status",
-  "description"
+  "description",
+  "warning_threshold"
  ],
  "fields": [
   {
@@ -74,7 +75,7 @@
    "fieldname": "instructor",
    "fieldtype": "Link",
    "label": "Instructor",
-   "options": "User"
+   "options": "Faculty Member"
   },
   {
    "fieldname": "room",
@@ -90,7 +91,9 @@
    "fieldname": "total_slots",
    "fieldtype": "Int",
    "label": "Total Slots",
-   "reqd": 1
+   "reqd": 1,
+   "default": "20",
+   "read_only": 1
   },
   {
    "fieldname": "hours_per_slot",
@@ -100,7 +103,8 @@
   {
    "fieldname": "planned_hours",
    "fieldtype": "Float",
-   "label": "Planned Hours"
+   "label": "Planned Hours",
+   "read_only": 1
   },
   {
    "fieldname": "start_date",
@@ -117,18 +121,44 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Planned\nOpen\nIn Progress\nCompleted\nCancelled",
-   "reqd": 1
+   "reqd": 1,
+   "default": "Planned"
   },
   {
    "fieldname": "description",
    "fieldtype": "Small Text",
    "label": "Description"
+  },
+  {
+   "fieldname": "warning_threshold",
+   "fieldtype": "Percent",
+   "label": "Absence Warning Threshold (%)",
+   "default": "20",
+   "read_only": 1,
+   "description": "Warning is triggered strictly above 20% of 20 slots.",
+   "hidden": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-09-17 12:06:55.615327",
+ "links": [
+  {
+   "link_doctype": "Class Session",
+   "link_fieldname": "course_offering",
+   "group": "Attendance"
+  },
+  {
+   "link_doctype": "Student Course Enrollment",
+   "link_fieldname": "course_offering",
+   "group": "Attendance"
+  },
+  {
+   "link_doctype": "Student Warning",
+   "link_fieldname": "course_offering",
+   "group": "Attendance"
+  }
+ ],
+ "modified": "2026-10-19 15:00:00.000000",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Course Offering",
@@ -152,5 +182,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

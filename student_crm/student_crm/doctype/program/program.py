@@ -1,9 +1,6 @@
-# Copyright (c) 2026, FPT and contributors
-# For license information, please see license.txt
-
-# import frappe
 from frappe.model.document import Document
-
+from student_crm.attendance import nonnegative
 
 class Program(Document):
-	pass
+    def validate(self):
+        nonnegative(self,'duration_years','total_required_credits')

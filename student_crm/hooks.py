@@ -4,6 +4,8 @@ app_publisher = "FPT"
 app_description = "Quan ly Sinh vien"
 app_email = "anhquan27it@gmail.com"
 app_license = "mit"
+after_install = "student_crm.install.after_install"
+after_migrate = "student_crm.install.ensure_setup"
 
 # Apps
 # ------------------
@@ -253,3 +255,17 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+# Expire rolling-window behavioral warnings without waiting for new attendance.
+scheduler_events = {"daily": ["student_crm.attendance_service.expire_behavioral_warnings"]}
+
+# Student support lifecycle (managed by deploy_support.py)
+
+doc_events = {
+    "Student Support Case": {"on_update": "student_crm.support.case_changed"},
+    "Student Warning": {"on_update": "student_crm.support.warning_changed"},
+    "Intervention Log": {"on_update": "student_crm.support.intervention_changed"},
+    "Student": {"on_update": "student_crm.support.student_changed"},
+}
+scheduler_events["daily"].append("student_crm.support.daily_followups")
+notification_skip_email_types = ["Student CRM"]

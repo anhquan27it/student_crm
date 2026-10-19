@@ -1,9 +1,9 @@
-# Copyright (c) 2026, FPT and contributors
-# For license information, please see license.txt
-
-# import frappe
 from frappe.model.document import Document
-
+import frappe
+from student_crm.attendance import validate_dates
 
 class AcademicTerm(Document):
-	pass
+    def validate(self):
+        validate_dates(self)
+        if self.is_current and frappe.db.exists('Academic Term',{'is_current':1,'name':['!=',self.name or '']}):
+            frappe.throw('Another academic term is already marked current. Uncheck it first.')

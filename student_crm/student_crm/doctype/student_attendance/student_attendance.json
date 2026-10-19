@@ -25,7 +25,10 @@
   "remarks",
   "audit_section",
   "recorded_by",
-  "recorded_at"
+  "recorded_at",
+  "enrollment",
+  "late_minutes",
+  "excuse_reason"
  ],
  "fields": [
   {
@@ -40,33 +43,38 @@
    "fieldname": "student_name",
    "fieldtype": "Data",
    "label": "Student Name",
-   "read_only": 1
+   "read_only": 1,
+   "fetch_from": "student.student_name"
   },
   {
    "fieldname": "course",
    "fieldtype": "Link",
    "label": "Course",
-   "options": "Course"
+   "options": "Course",
+   "read_only": 1
   },
   {
    "fieldname": "slot",
    "fieldtype": "Select",
    "label": "Slot",
-   "options": "Slot 0\nSlot 1\nSlot 2\nSlot 3\nSlot 4\nSlot 5\nSlot 6\nSlot 7\nSlot 8\nSlot 9"
+   "options": "Slot 0\nSlot 1\nSlot 2\nSlot 3\nSlot 4\nSlot 5\nSlot 6\nSlot 7\nSlot 8\nSlot 9",
+   "fetch_from": "attendance_session.slot",
+   "read_only": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "Present\nAbsent\nLate\nExcused",
+   "options": "Present\nAbsent\nLate",
    "reqd": 1
   },
   {
    "fieldname": "session_no",
    "fieldtype": "Int",
    "label": "Session No",
-   "read_only": 1
+   "read_only": 1,
+   "fetch_from": "attendance_session.session_no"
   },
   {
    "fieldname": "academic_term",
@@ -85,8 +93,9 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Attendance ID",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 0,
+   "unique": 1,
+   "description": "Leave blank to generate an ID automatically."
   },
   {
    "fieldname": "class_section",
@@ -106,7 +115,8 @@
    "fieldtype": "Link",
    "label": "Course Offering",
    "options": "Course Offering",
-   "read_only": 1
+   "read_only": 1,
+   "fetch_from": "attendance_session.course_offering"
   },
   {
    "fieldname": "attendance_section",
@@ -117,13 +127,16 @@
    "fieldname": "session_date",
    "fieldtype": "Date",
    "label": "Session Date",
-   "read_only": 1
+   "read_only": 1,
+   "fetch_from": "attendance_session.session_date"
   },
   {
    "fieldname": "attendance_type",
    "fieldtype": "Select",
    "label": "Attendance Type",
-   "options": "Regular\nMake-up\nOnline"
+   "options": "Regular\nMake-up\nOnline",
+   "read_only": 1,
+   "hidden": 1
   },
   {
    "fieldname": "remarks",
@@ -147,12 +160,31 @@
    "fieldtype": "Datetime",
    "label": "Recorded At",
    "read_only": 1
+  },
+  {
+   "fieldname": "enrollment",
+   "fieldtype": "Link",
+   "label": "Enrollment",
+   "options": "Student Course Enrollment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "late_minutes",
+   "fieldtype": "Int",
+   "label": "Late Minutes",
+   "default": "0"
+  },
+  {
+   "fieldname": "excuse_reason",
+   "fieldtype": "Small Text",
+   "label": "Excuse Reason",
+   "hidden": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-17 12:06:55.884749",
+ "modified": "2026-10-19 15:00:00.000000",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Student Attendance",
@@ -176,5 +208,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

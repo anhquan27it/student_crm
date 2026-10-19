@@ -23,7 +23,24 @@
   "total_present",
   "total_absent",
   "attendance_rate",
-  "absent_rate"
+  "absent_rate",
+  "withdrawal_date",
+  "total_completed_slots",
+  "total_late",
+  "total_excused",
+  "absence_percentage",
+  "consecutive_absences",
+  "warning_status",
+  "total_sessions",
+  "completed_sessions",
+  "absent_count",
+  "present_count",
+  "late_count",
+  "absent_percentage",
+  "max_allowed_absences",
+  "remaining_absences",
+  "attendance_standing",
+  "statistics_updated_at"
  ],
  "fields": [
   {
@@ -43,15 +60,17 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Enrollment ID",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 0,
+   "unique": 1,
+   "description": "Leave blank to generate an ID automatically."
   },
   {
    "fetch_if_empty": 1,
    "fieldname": "student_name",
    "fieldtype": "Data",
    "label": "Student Name",
-   "read_only": 1
+   "read_only": 1,
+   "fetch_from": "student.student_name"
   },
   {
    "fieldname": "course_offering",
@@ -66,7 +85,8 @@
    "fieldtype": "Link",
    "label": "Course",
    "options": "Course",
-   "read_only": 1
+   "read_only": 1,
+   "fetch_from": "course_offering.course"
   },
   {
    "fetch_if_empty": 1,
@@ -74,7 +94,8 @@
    "fieldtype": "Link",
    "label": "Academic Term",
    "options": "Academic Term",
-   "read_only": 1
+   "read_only": 1,
+   "fetch_from": "course_offering.academic_term"
   },
   {
    "fieldname": "enrollment_date",
@@ -86,12 +107,14 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Enrolled\nCompleted\nDropped\nWithdrawn\nFailed",
-   "reqd": 1
+   "reqd": 1,
+   "default": "Enrolled"
   },
   {
    "fieldname": "credit",
    "fieldtype": "Float",
-   "label": "Credits"
+   "label": "Credits",
+   "read_only": 1
   },
   {
    "fieldname": "final_grade",
@@ -106,38 +129,162 @@
   {
    "fieldname": "total_scheduled_sessions",
    "fieldtype": "Int",
-   "label": "Total Sessions",
-   "read_only": 1
+   "label": "Planned Slots",
+   "read_only": 1,
+   "hidden": 1
   },
   {
    "fieldname": "total_present",
    "fieldtype": "Int",
-   "label": "Total Present",
-   "read_only": 1
+   "label": "Present Slots (Including Late)",
+   "read_only": 1,
+   "hidden": 1
   },
   {
    "fieldname": "total_absent",
    "fieldtype": "Int",
-   "label": "Total Absent",
-   "read_only": 1
+   "label": "Absent Slots (Including Excused)",
+   "read_only": 1,
+   "hidden": 1
   },
   {
    "fieldname": "attendance_rate",
    "fieldtype": "Percent",
-   "label": "Attendance Rate",
-   "read_only": 1
+   "label": "Attendance / Finalized Slots (%)",
+   "read_only": 1,
+   "hidden": 1
   },
   {
    "fieldname": "absent_rate",
    "fieldtype": "Percent",
-   "label": "Absent Rate",
+   "label": "Absence / Finalized Slots (%)",
+   "read_only": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "withdrawal_date",
+   "fieldtype": "Date",
+   "label": "Withdrawal Date"
+  },
+  {
+   "fieldname": "total_completed_slots",
+   "fieldtype": "Int",
+   "label": "Finalized Slots",
+   "read_only": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "total_late",
+   "fieldtype": "Int",
+   "label": "Late Slots",
+   "read_only": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "total_excused",
+   "fieldtype": "Int",
+   "label": "Excused Slots",
+   "read_only": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "absence_percentage",
+   "fieldtype": "Percent",
+   "label": "Absence / Full Course (%)",
+   "read_only": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "consecutive_absences",
+   "fieldtype": "Int",
+   "label": "Consecutive Absent Slots",
+   "read_only": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "warning_status",
+   "fieldtype": "Select",
+   "label": "Warning Status",
+   "options": "Normal\nWarning",
+   "read_only": 1,
+   "default": "Normal",
+   "hidden": 1
+  },
+  {
+   "fieldname": "total_sessions",
+   "fieldtype": "Int",
+   "label": "Total Course Slots",
+   "read_only": 1,
+   "default": "20"
+  },
+  {
+   "fieldname": "completed_sessions",
+   "fieldtype": "Int",
+   "label": "Finalized Slots",
+   "read_only": 1
+  },
+  {
+   "fieldname": "absent_count",
+   "fieldtype": "Int",
+   "label": "Absent Slots",
+   "read_only": 1
+  },
+  {
+   "fieldname": "present_count",
+   "fieldtype": "Int",
+   "label": "Present Slots (Includes Late)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "late_count",
+   "fieldtype": "Int",
+   "label": "Late Slots",
+   "read_only": 1
+  },
+  {
+   "fieldname": "absent_percentage",
+   "fieldtype": "Percent",
+   "label": "Absence / Full Course (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "max_allowed_absences",
+   "fieldtype": "Int",
+   "label": "Max Allowed Absences",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remaining_absences",
+   "fieldtype": "Int",
+   "label": "Remaining Absences",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_standing",
+   "fieldtype": "Select",
+   "label": "Attendance Standing",
+   "options": "Good\nWarning\nCritical\nBarred",
+   "default": "Good",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "statistics_updated_at",
+   "fieldtype": "Datetime",
+   "label": "Statistics Updated At",
    "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-09-17 12:06:55.777404",
+ "links": [
+  {
+   "link_doctype": "Student Warning",
+   "link_fieldname": "enrollment",
+   "group": "Attendance"
+  }
+ ],
+ "modified": "2026-10-19 15:00:00.000000",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Student Course Enrollment",
@@ -161,5 +308,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

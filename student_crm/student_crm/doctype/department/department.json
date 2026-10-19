@@ -42,12 +42,13 @@
    "fieldname": "head_of_department",
    "fieldtype": "Link",
    "label": "Head of Department",
-   "options": "User"
+   "options": "Faculty Member"
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
-   "label": "Email"
+   "label": "Email",
+   "options": "Email"
   },
   {
    "fieldname": "phone",
@@ -58,7 +59,8 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Active\nInactive"
+   "options": "Active\nInactive",
+   "default": "Active"
   },
   {
    "fieldname": "description",
@@ -69,7 +71,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-15 13:43:56.231951",
+ "modified": "2026-10-19 15:00:00.000000",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Department",
@@ -93,5 +95,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

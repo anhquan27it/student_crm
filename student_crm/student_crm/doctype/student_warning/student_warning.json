@@ -1,0 +1,238 @@
+{
+ "doctype": "DocType",
+ "name": "Student Warning",
+ "module": "Student Crm",
+ "autoname": "hash",
+ "engine": "InnoDB",
+ "track_changes": 1,
+ "field_order": [
+  "enrollment",
+  "student",
+  "course_offering",
+  "academic_term",
+  "absent_slots",
+  "total_slots",
+  "absence_percentage",
+  "threshold",
+  "reason",
+  "first_detected_at",
+  "last_evaluated_at",
+  "is_active",
+  "status",
+  "assigned_to",
+  "follow_up_notes",
+  "warning_key",
+  "warning_type",
+  "severity",
+  "remaining_absences",
+  "consecutive_sessions",
+  "window_start",
+  "window_end",
+  "last_session",
+  "evidence_json",
+  "occurrence_count",
+  "resolved_at",
+  "next_follow_up_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "enrollment",
+   "fieldtype": "Link",
+   "label": "Enrollment",
+   "options": "Student Course Enrollment",
+   "reqd": 0,
+   "unique": 0,
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "Student",
+   "read_only": 1,
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "course_offering",
+   "fieldtype": "Link",
+   "label": "Course Offering",
+   "options": "Course Offering",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "label": "Academic Term",
+   "options": "Academic Term",
+   "read_only": 1
+  },
+  {
+   "fieldname": "absent_slots",
+   "fieldtype": "Int",
+   "label": "Absent Slots",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_slots",
+   "fieldtype": "Int",
+   "label": "Course Slots",
+   "read_only": 1
+  },
+  {
+   "fieldname": "absence_percentage",
+   "fieldtype": "Percent",
+   "label": "Absence (%)",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "threshold",
+   "fieldtype": "Percent",
+   "label": "Threshold (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason",
+   "read_only": 1
+  },
+  {
+   "fieldname": "first_detected_at",
+   "fieldtype": "Datetime",
+   "label": "First Detected At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_evaluated_at",
+   "fieldtype": "Datetime",
+   "label": "Last Evaluated At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Threshold Currently Exceeded",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Follow-up Status",
+   "options": "Open\nIn Progress\nResolved",
+   "default": "Open",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "Faculty Member"
+  },
+  {
+   "fieldname": "follow_up_notes",
+   "fieldtype": "Small Text",
+   "label": "Follow-up Notes"
+  },
+  {
+   "fieldname": "warning_key",
+   "fieldtype": "Data",
+   "label": "Warning Key",
+   "unique": 1,
+   "reqd": 1,
+   "read_only": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "warning_type",
+   "fieldtype": "Select",
+   "label": "Warning Type",
+   "options": "Course-Level\nBehavioral-Level",
+   "read_only": 1,
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "label": "Severity",
+   "options": "Warning\nCritical\nBarred",
+   "read_only": 1,
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "remaining_absences",
+   "fieldtype": "Int",
+   "label": "Remaining Absences",
+   "read_only": 1
+  },
+  {
+   "fieldname": "consecutive_sessions",
+   "fieldtype": "Int",
+   "label": "Consecutive Sessions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "window_start",
+   "fieldtype": "Date",
+   "label": "Window Start",
+   "read_only": 1
+  },
+  {
+   "fieldname": "window_end",
+   "fieldtype": "Date",
+   "label": "Window End",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_session",
+   "fieldtype": "Link",
+   "label": "Last Session",
+   "options": "Class Session",
+   "read_only": 1
+  },
+  {
+   "fieldname": "evidence_json",
+   "fieldtype": "Code",
+   "label": "Evidence Json",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "occurrence_count",
+   "fieldtype": "Int",
+   "label": "Occurrence Count",
+   "default": "1",
+   "read_only": 1
+  },
+  {
+   "fieldname": "resolved_at",
+   "fieldtype": "Datetime",
+   "label": "Resolved At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_follow_up_date",
+   "fieldtype": "Date",
+   "label": "Next Follow Up Date"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "modified": "2026-10-19 15:00:00.000000"
+}

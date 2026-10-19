@@ -1,0 +1,94 @@
+{
+  "doctype": "DocType",
+  "name": "Advisor Assignment",
+  "module": "Student Crm",
+  "autoname": "format:ADV-{#####}",
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "student",
+      "label": "Student",
+      "fieldtype": "Link",
+      "reqd": 1,
+      "read_only": 1,
+      "options": "Student",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "advisor",
+      "label": "Advisor",
+      "fieldtype": "Link",
+      "reqd": 1,
+      "read_only": 1,
+      "options": "Faculty Member",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "academic_term",
+      "label": "Academic Term",
+      "fieldtype": "Link",
+      "reqd": 0,
+      "read_only": 1,
+      "options": "Academic Term"
+    },
+    {
+      "fieldname": "effective_from",
+      "label": "Effective From",
+      "fieldtype": "Datetime",
+      "reqd": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "effective_to",
+      "label": "Effective To",
+      "fieldtype": "Datetime",
+      "reqd": 0,
+      "read_only": 1
+    },
+    {
+      "fieldname": "assignment_reason",
+      "label": "Assignment Reason",
+      "fieldtype": "Small Text",
+      "reqd": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "recorded_by",
+      "label": "Recorded By",
+      "fieldtype": "Link",
+      "reqd": 1,
+      "read_only": 1,
+      "options": "User"
+    },
+    {
+      "fieldname": "recorded_at",
+      "label": "Recorded At",
+      "fieldtype": "Datetime",
+      "reqd": 1,
+      "read_only": 1
+    }
+  ],
+  "field_order": [
+    "student",
+    "advisor",
+    "academic_term",
+    "effective_from",
+    "effective_to",
+    "assignment_reason",
+    "recorded_by",
+    "recorded_at"
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

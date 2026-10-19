@@ -1,0 +1,22 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {isAllowedMethod} from '../server.mjs';
+test('Proxy exposes only the explicit application endpoints',()=>{
+ assert.ok(isAllowedMethod('/api/method/login'));
+ assert.ok(isAllowedMethod('/api/method/student_crm.api.submit_bulk_attendance'));
+ assert.ok(isAllowedMethod('/api/method/student_crm.portal.save_intervention'));
+ assert.ok(isAllowedMethod('/api/method/student_crm.support.review_correction'));
+ assert.ok(isAllowedMethod('/api/method/student_crm.support.get_case'));
+ assert.ok(isAllowedMethod('/api/method/student_crm.support.get_correction'));
+ assert.ok(isAllowedMethod('/api/method/student_crm.support.get_notification'));
+ assert.ok(isAllowedMethod('/api/method/student_crm.experience.get_workbench'));
+ assert.ok(isAllowedMethod('/api/method/student_crm.experience.unread_count'));
+ assert.equal(isAllowedMethod('/api/method/student_crm.experience.student_metrics'),false);
+ assert.equal(isAllowedMethod('/api/method/student_crm.support.reconcile_legacy_attendance'),false);
+ assert.equal(isAllowedMethod('/api/method/student_crm.support.daily_followups'),false);
+ assert.equal(isAllowedMethod('/api/method/frappe.client.get_list'),false);
+ assert.equal(isAllowedMethod('/api/method/student_crm.portal._private'),false);
+ assert.equal(isAllowedMethod('/api/resource/User'),false);
+ assert.equal(isAllowedMethod('/api/method/student_crm.demo.seed'),false);
+ assert.equal(isAllowedMethod('/api/method/student_crm.install.ensure_setup'),false);
+});

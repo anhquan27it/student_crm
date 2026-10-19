@@ -10,16 +10,23 @@
   "class_session_detail_section",
   "session_id",
   "course_offering",
-  "sesion_no",
+  "session_no",
   "session_date",
   "start_time",
   "end_time",
   "slot",
   "room",
-  "instuctor",
+  "instructor",
   "status",
   "topic",
-  "remarks"
+  "remarks",
+  "slot_count",
+  "session_type",
+  "delivery_mode",
+  "original_session",
+  "attendance_finalized",
+  "attendance_recorded_by",
+  "attendance_recorded_at"
  ],
  "fields": [
   {
@@ -32,8 +39,9 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Session ID",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 0,
+   "unique": 1,
+   "description": "Leave blank to generate an ID automatically."
   },
   {
    "fieldname": "course_offering",
@@ -44,7 +52,7 @@
    "reqd": 1
   },
   {
-   "fieldname": "sesion_no",
+   "fieldname": "session_no",
    "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Session No",
@@ -76,20 +84,25 @@
   {
    "fieldname": "room",
    "fieldtype": "Data",
-   "label": "Room"
+   "label": "Room",
+   "fetch_from": "course_offering.room",
+   "fetch_if_empty": 1
   },
   {
-   "fieldname": "instuctor",
+   "fieldname": "instructor",
    "fieldtype": "Link",
    "label": "Instructor",
-   "options": "User"
+   "options": "Faculty Member",
+   "fetch_from": "course_offering.instructor",
+   "fetch_if_empty": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Scheduled\nCompleted\nCancelled\nPostponed\nMake-up",
-   "reqd": 1
+   "options": "Scheduled\nCompleted\nCancelled\nPostponed",
+   "reqd": 1,
+   "default": "Scheduled"
   },
   {
    "fieldname": "topic",
@@ -100,12 +113,67 @@
    "fieldname": "remarks",
    "fieldtype": "Small Text",
    "label": "Remarks"
+  },
+  {
+   "fieldname": "slot_count",
+   "fieldtype": "Int",
+   "label": "Number of Slots",
+   "default": "1",
+   "reqd": 1,
+   "description": "Number of teaching slots covered by this session, from 1 to 20."
+  },
+  {
+   "fieldname": "session_type",
+   "fieldtype": "Select",
+   "label": "Session Type",
+   "options": "Regular\nMake-up",
+   "default": "Regular",
+   "reqd": 1
+  },
+  {
+   "fieldname": "delivery_mode",
+   "fieldtype": "Select",
+   "label": "Delivery Mode",
+   "options": "Offline\nOnline\nHybrid",
+   "default": "Offline"
+  },
+  {
+   "fieldname": "original_session",
+   "fieldtype": "Link",
+   "label": "Original Session",
+   "options": "Class Session"
+  },
+  {
+   "fieldname": "attendance_finalized",
+   "fieldtype": "Check",
+   "label": "Attendance Finalized",
+   "default": "0",
+   "description": "Only finalized, completed sessions count toward warnings. Every eligible enrolled student needs a record."
+  },
+  {
+   "fieldname": "attendance_recorded_by",
+   "fieldtype": "Link",
+   "label": "Attendance Recorded By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_recorded_at",
+   "fieldtype": "Datetime",
+   "label": "Attendance Recorded At",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-09-16 14:16:45.366029",
+ "links": [
+  {
+   "link_doctype": "Student Attendance",
+   "link_fieldname": "attendance_session",
+   "group": "Attendance"
+  }
+ ],
+ "modified": "2026-10-19 15:00:00.000000",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Class Session",
@@ -129,5 +197,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

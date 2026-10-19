@@ -14,7 +14,7 @@
   "gender",
   "email",
   "phone",
-  "adresss",
+  "address",
   "department",
   "program",
   "admission_term",
@@ -23,11 +23,16 @@
   "advisor",
   "student_status",
   "notes",
-  "registerd_credits",
+  "registered_credits",
   "completed_credits",
   "gpa",
   "attendance_rate",
-  "total_absent"
+  "total_absent",
+  "birth_year",
+  "user",
+  "risk_standing",
+  "behavioral_absence_streak",
+  "risk_updated_at"
  ],
  "fields": [
   {
@@ -39,17 +44,18 @@
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email",
-   "reqd": 1
+   "reqd": 1,
+   "options": "Email"
   },
   {
    "fieldname": "phone",
    "fieldtype": "Data",
    "label": "Phone",
-   "reqd": 1
+   "reqd": 0
   },
   {
    "fieldname": "date_of_birth",
-   "fieldtype": "Int",
+   "fieldtype": "Date",
    "label": "Date of birth"
   },
   {
@@ -73,7 +79,7 @@
    "options": "Male\nFemale\nOther"
   },
   {
-   "fieldname": "adresss",
+   "fieldname": "address",
    "fieldtype": "Small Text",
    "label": "Address"
   },
@@ -82,7 +88,9 @@
    "fieldtype": "Link",
    "label": "Department",
    "options": "Department",
-   "reqd": 1
+   "reqd": 1,
+   "fetch_from": "program.department",
+   "read_only": 1
   },
   {
    "fieldname": "program",
@@ -112,14 +120,15 @@
    "fieldname": "advisor",
    "fieldtype": "Link",
    "label": "Advisor",
-   "options": "User"
+   "options": "Faculty Member"
   },
   {
    "fieldname": "student_status",
    "fieldtype": "Select",
    "label": "Student Status",
    "options": "Active\nInactive\nSuspended\nGraduated\nWithdrawn\nOn Leave",
-   "reqd": 1
+   "reqd": 1,
+   "default": "Active"
   },
   {
    "fieldname": "notes",
@@ -127,7 +136,7 @@
    "label": "Notes"
   },
   {
-   "fieldname": "registerd_credits",
+   "fieldname": "registered_credits",
    "fieldtype": "Float",
    "label": "Registered Credits",
    "read_only": 1
@@ -155,12 +164,63 @@
    "fieldtype": "Int",
    "label": "Total Absent",
    "read_only": 1
+  },
+  {
+   "fieldname": "birth_year",
+   "fieldtype": "Int",
+   "label": "Birth Year (Legacy)",
+   "read_only": 1,
+   "description": "Original birth year retained; do not infer a full date."
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "Student User",
+   "options": "User",
+   "unique": 1
+  },
+  {
+   "fieldname": "risk_standing",
+   "fieldtype": "Select",
+   "label": "Risk Standing",
+   "options": "Good\nWarning\nCritical\nBarred",
+   "default": "Good",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "behavioral_absence_streak",
+   "fieldtype": "Int",
+   "label": "Behavioral Absence Streak",
+   "read_only": 1
+  },
+  {
+   "fieldname": "risk_updated_at",
+   "fieldtype": "Datetime",
+   "label": "Risk Updated At",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-09-15 15:31:55.318117",
+ "links": [
+  {
+   "link_doctype": "Student Course Enrollment",
+   "link_fieldname": "student",
+   "group": "Attendance"
+  },
+  {
+   "link_doctype": "Student Attendance",
+   "link_fieldname": "student",
+   "group": "Attendance"
+  },
+  {
+   "link_doctype": "Student Warning",
+   "link_fieldname": "student",
+   "group": "Attendance"
+  }
+ ],
+ "modified": "2026-10-19 15:00:00.000000",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Student",
@@ -184,5 +244,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

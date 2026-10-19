@@ -1,0 +1,85 @@
+{
+ "doctype": "DocType",
+ "name": "CRM Settings",
+ "module": "Student Crm",
+ "engine": "InnoDB",
+ "autoname": "hash",
+ "track_changes": 1,
+ "field_order": [
+  "default_total_sessions",
+  "reminder_percentage",
+  "critical_percentage",
+  "barred_percentage",
+  "near_limit_remaining",
+  "behavioral_consecutive_sessions",
+  "behavioral_window_days"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_total_sessions",
+   "fieldtype": "Int",
+   "label": "Default Course Slots",
+   "default": "20",
+   "reqd": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "reminder_percentage",
+   "fieldtype": "Percent",
+   "label": "Reminder Percentage",
+   "default": "10",
+   "reqd": 1
+  },
+  {
+   "fieldname": "critical_percentage",
+   "fieldtype": "Percent",
+   "label": "Critical Percentage",
+   "default": "15",
+   "reqd": 1
+  },
+  {
+   "fieldname": "barred_percentage",
+   "fieldtype": "Percent",
+   "label": "Barred Percentage",
+   "default": "20",
+   "reqd": 1,
+   "description": "Barred only when absence percentage is strictly greater than this value."
+  },
+  {
+   "fieldname": "near_limit_remaining",
+   "fieldtype": "Int",
+   "label": "Near Limit Remaining",
+   "default": "1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "behavioral_consecutive_sessions",
+   "fieldtype": "Int",
+   "label": "Behavioral Consecutive Sessions",
+   "default": "3",
+   "reqd": 1
+  },
+  {
+   "fieldname": "behavioral_window_days",
+   "fieldtype": "Int",
+   "label": "Behavioral Window Days",
+   "default": "14",
+   "reqd": 1,
+   "description": "Inclusive rolling window: 7 to 14 calendar days."
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "issingle": 1
+}

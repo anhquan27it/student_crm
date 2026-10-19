@@ -1,0 +1,131 @@
+{
+  "doctype": "DocType",
+  "name": "Student Support Case",
+  "module": "Student Crm",
+  "autoname": "format:CASE-{#####}",
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "student",
+      "label": "Student",
+      "fieldtype": "Link",
+      "reqd": 1,
+      "read_only": 1,
+      "options": "Student",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "academic_term",
+      "label": "Academic Term",
+      "fieldtype": "Link",
+      "reqd": 0,
+      "read_only": 1,
+      "options": "Academic Term"
+    },
+    {
+      "fieldname": "case_key",
+      "label": "Case Key",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "read_only": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "owner_advisor",
+      "label": "Owner Advisor",
+      "fieldtype": "Link",
+      "reqd": 0,
+      "read_only": 1,
+      "options": "Faculty Member",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "priority",
+      "label": "Priority",
+      "fieldtype": "Select",
+      "reqd": 1,
+      "read_only": 0,
+      "options": "Normal\nHigh\nUrgent",
+      "default": "High"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "reqd": 1,
+      "read_only": 0,
+      "options": "Open\nIn Progress\nMonitoring\nClosed",
+      "default": "Open",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "opened_at",
+      "label": "Opened At",
+      "fieldtype": "Datetime",
+      "reqd": 0,
+      "read_only": 1
+    },
+    {
+      "fieldname": "target_date",
+      "label": "Target Date",
+      "fieldtype": "Date",
+      "reqd": 0,
+      "read_only": 0
+    },
+    {
+      "fieldname": "support_plan",
+      "label": "Support Plan",
+      "fieldtype": "Text",
+      "reqd": 0,
+      "read_only": 0
+    },
+    {
+      "fieldname": "resolution_summary",
+      "label": "Resolution Summary",
+      "fieldtype": "Text",
+      "reqd": 0,
+      "read_only": 0
+    },
+    {
+      "fieldname": "closed_at",
+      "label": "Closed At",
+      "fieldtype": "Datetime",
+      "reqd": 0,
+      "read_only": 1
+    },
+    {
+      "fieldname": "baseline_attendance_rate",
+      "label": "Baseline Attendance Rate",
+      "fieldtype": "Percent",
+      "reqd": 0,
+      "read_only": 1
+    }
+  ],
+  "field_order": [
+    "student",
+    "academic_term",
+    "case_key",
+    "owner_advisor",
+    "priority",
+    "status",
+    "opened_at",
+    "target_date",
+    "support_plan",
+    "resolution_summary",
+    "closed_at",
+    "baseline_attendance_rate"
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

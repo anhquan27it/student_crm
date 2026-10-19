@@ -1,0 +1,115 @@
+{
+  "COURSES": [
+    [
+      "CEA201",
+      "Computer Organization and Architecture",
+      1
+    ],
+    [
+      "CSI106",
+      "Introduction to Computer Science",
+      1
+    ],
+    [
+      "MAE101",
+      "Mathematics for Engineering",
+      1
+    ],
+    [
+      "PRF192",
+      "Programming Fundamentals",
+      1
+    ],
+    [
+      "SSL101c",
+      "Academic Skills for University Success",
+      1
+    ],
+    [
+      "JPD113",
+      "Elementary Japanese 1- A1.1",
+      2
+    ],
+    [
+      "MAD101",
+      "Discrete mathematics",
+      2
+    ],
+    [
+      "NWC204",
+      "Computer Networking",
+      2
+    ],
+    [
+      "OSG202",
+      "Operating Systems",
+      2
+    ],
+    [
+      "PRO192",
+      "Object-Oriented Programming",
+      2
+    ],
+    [
+      "CSD201",
+      "Data Structures and Algorithms",
+      3
+    ],
+    [
+      "DBI202",
+      "Introduction to Databases",
+      3
+    ],
+    [
+      "JPD123",
+      "Elementary Japanese 1-A1.2",
+      3
+    ],
+    [
+      "LAB211",
+      "OOP with Java Lab",
+      3
+    ],
+    [
+      "MAS291",
+      "Statistics & Probability",
+      4
+    ]
+  ],
+  "NAMES": [
+    "Nguyễn Minh An",
+    "Trần Gia Bảo",
+    "Lê Hoàng Châu",
+    "Phạm Hải Đăng",
+    "Hoàng Minh Đức",
+    "Vũ Ngọc Hà",
+    "Đặng Thu Hương",
+    "Bùi Quang Huy",
+    "Đỗ Khánh Linh",
+    "Hồ Nhật Minh",
+    "Ngô Tuấn Nam",
+    "Dương Bảo Ngọc",
+    "Lý Minh Phúc",
+    "Trương Gia Quân",
+    "Đinh Thảo Trang",
+    "Mai Thanh Trúc",
+    "Tạ Anh Tuấn",
+    "Phan Ngọc Vy",
+    "Võ Hải Yến",
+    "Cao Minh Khang",
+    "Lâm Phương Nhi",
+    "Châu Đức Thành",
+    "Đoàn Minh Tâm",
+    "Tô Quỳnh Anh"
+  ],
+  "FACULTY_NAMES": [
+    "Nguyễn Hoài Phương",
+    "Trần Minh Quang",
+    "Lê Thu Thảo",
+    "Phạm Quốc Hưng",
+    "Vũ Minh Triết",
+    "Đặng Hồng Nhung",
+    "Bùi Anh Khoa",
+    "Đỗ Thanh Vân"
+  ]
+}

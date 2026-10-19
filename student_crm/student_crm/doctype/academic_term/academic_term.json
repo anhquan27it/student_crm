@@ -11,7 +11,7 @@
   "term_code",
   "term_name",
   "academic_year",
-  "start",
+  "start_date",
   "end_date",
   "status",
   "is_current",
@@ -68,7 +68,7 @@
    "label": "Description"
   },
   {
-   "fieldname": "start",
+   "fieldname": "start_date",
    "fieldtype": "Date",
    "label": "Start Date",
    "reqd": 1
@@ -77,7 +77,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-15 15:27:47.361930",
+ "modified": "2026-10-19 14:00:00.000000",
  "modified_by": "Administrator",
  "module": "Student Crm",
  "name": "Academic Term",
@@ -101,5 +101,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
