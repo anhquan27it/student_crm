@@ -171,5 +171,3 @@ function expireSession(){if(modal.open)modal.close();login('Phiên đăng nhập
 function syncFilterQuery(key,value){const [path,query='']=location.hash.split('?');const params=new URLSearchParams(query);params.set(key,value);history.replaceState(null,'',path+'?'+params.toString());state.lastHash=location.hash;}
 async function navigate(hash){if(location.hash===hash){state.lastHash=null;await route();}else location.hash=hash;}
 boot();
-
-
