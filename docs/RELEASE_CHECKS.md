@@ -1,5 +1,7 @@
 # Kiểm tra bản đóng gói — 19/10/2026
 
+**Bổ sung 20/10/2026 — full-copy 121 sinh viên:** gói AES-256-GCM được giải mã/restore lên site và MariaDB riêng. Hash nội dung của 15 bảng nghiệp vụ cùng CRM Settings khớp nguồn; 20 kiểm tra HTTP trên bản khôi phục đã qua, gồm Administrator, cố vấn, giảng viên, sinh viên và tên/nội dung nhật ký gốc. Bốn kiểm tra mã hóa (round-trip, sai khóa, sửa ciphertext, chống ghi đè) và 21 kiểm thử frontend đã qua. Site/database thử đã dọn, dữ liệu nguồn giữ nguyên. Hướng dẫn: [RESTORE_SAME_SITE.md](RESTORE_SAME_SITE.md). Các phần bên dưới mô tả bộ seed 100 sinh viên, khác với full-copy mới này.
+
 Bản này đã được cài bằng `install-app` lên một site Frappe mới, chạy với một MariaDB tạm và web server riêng trong WSL. Site/database gốc không được dùng để tạo bộ seed mới.
 
 | Kiểm tra | Kết quả |

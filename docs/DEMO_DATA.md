@@ -1,5 +1,7 @@
 # Dữ liệu mẫu portable
 
+Bộ này tạo 100 sinh viên giả lập khác. Muốn đúng toàn bộ dữ liệu máy tác giả với **121 sinh viên**, dùng [bản sao mã hóa](RESTORE_SAME_SITE.md), không chạy seed vào site nhận bản sao.
+
 Danh sách 15 môn nằm trong [`catalog.json`](../student_crm/demo_data/catalog.json): CEA201, CSI106, MAE101, PRF192, SSL101c, JPD113, MAD101, NWC204, OSG202, PRO192, CSD201, DBI202, JPD123, LAB211, MAS291. Tên môn và học kỳ khuyến nghị theo danh sách ban đầu; demo mở cả 15 môn trong một học kỳ để tiện thử.
 
 Seed là mã Python gọi Document/controller thật, không phải bản dump database từ máy tác giả. Mọi tên, email `example.com`, kết quả điểm danh và ghi chú đều giả lập.

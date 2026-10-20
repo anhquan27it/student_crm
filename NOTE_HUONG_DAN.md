@@ -2,6 +2,8 @@
 
 **Repository:** https://github.com/anhquan27it/student_crm
 
+**Cập nhật:** nếu muốn đúng toàn bộ dữ liệu máy tác giả (**121 sinh viên**, cùng nhật ký và dữ liệu cũ), làm theo [RESTORE_SAME_SITE.md](docs/RESTORE_SAME_SITE.md). Các bước seed bên dưới chỉ dành cho bộ giả lập 100 sinh viên khác, không áp dụng lên site nhận bản sao đầy đủ.
+
 Tài liệu này dành cho thành viên muốn chạy dự án trên **Ubuntu hoặc Ubuntu trong WSL2 của mình**, với Frappe/database riêng. Làm lần lượt từ trên xuống. Mọi lệnh Bash bên dưới chạy trong terminal Ubuntu, không chạy trong PowerShell.
 
 ## 1. Dữ liệu mẫu trên GitHub được lưu như thế nào?

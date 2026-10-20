@@ -1,6 +1,8 @@
 # Student CRM — Điểm danh và cảnh báo sớm
 
-Backend **Frappe v16** và Website tiếng Việt cho quản lý chuyên cần sinh viên đại học. Clone repository này để cài trên Ubuntu/WSL của bạn; không cần database, tài khoản Ubuntu hay mật khẩu Administrator từ máy tác giả.
+Backend **Frappe v16** và Website tiếng Việt cho quản lý chuyên cần sinh viên đại học. Có thể tạo bộ demo 100 sinh viên hoặc khôi phục bản sao mã hóa đủ 121 sinh viên trên Ubuntu/WSL của bạn; không cần tài khoản Ubuntu hay mật khẩu Administrator của tác giả.
+
+**Muốn Website và dữ liệu giống máy tác giả, gồm đủ 121 sinh viên:** dùng [hướng dẫn khôi phục bản sao mã hóa](docs/RESTORE_SAME_SITE.md). Nhận khóa riêng từ tác giả; không chạy seed 100 sinh viên cho site này.
 
 **Hướng dẫn đầy đủ:** [Cài đặt Ubuntu / WSL](docs/INSTALL_UBUNTU.md) · [Dữ liệu và tài khoản mẫu](docs/DEMO_DATA.md) · [Kiến trúc và API](docs/DEVELOPMENT.md).
 
@@ -86,6 +88,6 @@ Backend và HTTP thực tế cần Frappe đang chạy; xem [DEVELOPMENT.md](doc
 
 Bản đóng gói đã được kiểm tra cài mới, seed và migrate: [kết quả kiểm thử](docs/RELEASE_CHECKS.md).
 
-Repo không chứa `.env`, session, database backup hoặc dữ liệu sinh viên thật. Môi trường mặc định chạy local; triển khai Internet cần cấu hình server/HTTPS và đổi thông tin đăng nhập demo trước.
+Repo không chứa `.env`, khóa giải mã hoặc SQL đọc được. Thư mục `transfer/` có bản sao toàn site đã mã hóa, chỉ thành viên được tác giả gửi khóa riêng mới mở được. Môi trường mặc định chạy local; triển khai Internet cần cấu hình server/HTTPS và đổi thông tin đăng nhập demo trước.
 
 Giấy phép: [MIT](license.txt).

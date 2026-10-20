@@ -1,5 +1,7 @@
 # Cài Student CRM trên Ubuntu / WSL2
 
+Muốn khôi phục đúng toàn bộ **121 sinh viên** của tác giả: chuẩn bị Bench ở bước 1–2 rồi chuyển sang [RESTORE_SAME_SITE.md](RESTORE_SAME_SITE.md). Các bước install-app/seed ở đây dành cho bộ demo 100 sinh viên riêng.
+
 Repo là một app Frappe hoàn chỉnh kèm Website riêng. Không cần chép `site_config.json`, database hoặc mật khẩu của máy khác. Thực hiện lệnh Linux trong terminal **Ubuntu**, không chạy trong PowerShell.
 
 ## 1. Chuẩn bị

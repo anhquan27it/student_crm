@@ -1,0 +1,24 @@
+{
+  "file": "studentcrm-20261020.crmenc",
+  "size": 686996,
+  "sha256": "0cb4b06c22e5c7f6dec715a7a5adeb05926623f033f34c6239272652018d8e09",
+  "created_at": "2026-10-20T10:58:04.918121+07:00",
+  "frappe_version": "16.34.0",
+  "counts": {
+    "Department": 8,
+    "Program": 21,
+    "Academic Term": 22,
+    "Course": 16,
+    "Faculty Member": 10,
+    "Course Offering": 43,
+    "Class Session": 613,
+    "Student": 121,
+    "Student Course Enrollment": 511,
+    "Student Attendance": 4010,
+    "Student Warning": 100,
+    "Student Support Case": 72,
+    "Advisor Assignment": 100,
+    "Intervention Log": 36,
+    "Attendance Correction Request": 0
+  }
+}

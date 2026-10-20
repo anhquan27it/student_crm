@@ -11,8 +11,14 @@ backups/
 *.sql
 *.sql.gz
 *.tar.gz
+*.tgz
+**/site_config.json
+**/common_site_config.json
+*-site_config_backup.json
 *.log
 *.pid
+*.crmkey
+**/transfer-unpacked-*/
 __pycache__/
 *.py[cod]
 node_modules/
